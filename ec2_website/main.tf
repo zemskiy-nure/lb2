@@ -31,7 +31,7 @@ owners = ["amazon"]
 resource "aws_instance" "web" {
 ami = data.aws_ami.amazon_linux.id
 instance_type = "t2.micro"
-key_name = "MyKeyPair1"
+key_name = "wordpress"
 vpc_security_group_ids = [aws_security_group.web_sg.id]
 tags = {
 "Name" = "New_webserver_pipeline"
